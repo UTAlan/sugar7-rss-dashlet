@@ -1,0 +1,31 @@
+{{!
+/*
+ *  This file is part of 'RSS Feed Dashlet'.
+ *
+ *  'RSS Feed Dashlet' is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation.
+ *
+ *  'RSS Feed Dashlet' is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with 'RSS Feed Dashlet'.  If not, see http://www.gnu.org/licenses/gpl.html.
+ *
+ * Copyright 2015 Alan Beam - All rights reserved.
+ */
+}}
+<div style="padding: 15px">
+{{#if this}}
+{{#each this}}
+    {{#if this.title}}
+    <h5><a href="{{{this.link}}}" target="_blank">{{{this.title}}}</a></h5>
+    <p>{{{this.desc}}}</p>
+    {{/if}}
+{{/each}}
+{{else}}
+    <div class="block-footer">{{str "LBL_NO_DATA_AVAILABLE"}}</div>
+{{/if}}
+</div>

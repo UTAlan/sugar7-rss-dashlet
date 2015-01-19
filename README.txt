@@ -1,8 +1,10 @@
 'RSS Feed Dashlet'.
 
-The end user may bring the dashlet to his home page and get the 5 latest items from a specified RSS URL.
+The end user may bring the dashlet to his home page and get:
+Data parsed from specified RSS Feed
 
-Available in English.
+Available in:
+English
 
 Copyright 2015 Alan Beam - All rights reserved.
 
