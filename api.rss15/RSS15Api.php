@@ -51,6 +51,9 @@ class RSS15Api extends SugarApi
             return array();
         } else {
             $feed_url = urldecode($args['feed_url']);
+            if(strpos($feed_url, 'http://') === false && strpos($feed_url, 'https://') === false) {
+                $feed_url = 'http://' . $feed_url;
+            }
         }
         
         $rss = new DOMDocument();
@@ -62,14 +65,16 @@ class RSS15Api extends SugarApi
                 'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
                 'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
                 'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
-                //'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
                 );
-            array_push($feed, $item);
+            $feed[] = $item;
         }
         
         $result = array();
-        for($i = 0; $i < 5; $i++) {
-            $result[] = $feed[$i];
+        foreach($feed as $k=>$item) {
+            if($k >= 5) {
+                break;
+            }
+            $result[] = $item;
         }
 
         return $result;

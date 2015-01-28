@@ -7,5 +7,8 @@ Available in English.
 Copyright 2015 Alan Beam - All rights reserved.
 
 Release notes:
+v 1.0.1 - 28 January 2015
+Fixed issue of feeds with fewer than 5 items not displaying.
+
 v 1.0.0 - 19 January 2015
 Original release.

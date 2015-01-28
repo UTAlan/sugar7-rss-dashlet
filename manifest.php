@@ -43,7 +43,7 @@ $manifest = array (
 		  'name' => 'RSS Feed Dashlet',
 		  'published_date' => '2015-01-19 12:00',
 		  'type' => 'module',
-		  'version' => '1.0.0',
+		  'version' => '1.0.1',
 		  'remove_tables' => false,
 		  );  
 		  
